@@ -12,13 +12,13 @@
                 file = files[0];
                 try {
                     // Create ObjectURL
-                    var imgURL = window.URL.createObjectURL(file);
+                    var imgURL = window.URL.createObjectURL(file); // Type: blob url
 
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
 
                     // Revoke ObjectURL
-                    URL.revokeObjectURL(imgURL);
+                    URL.revokeObjectURL(imgURL); // After used, release the memory
                 }
                 catch (e) {
                     try {
